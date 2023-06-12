@@ -9,5 +9,6 @@
     "source=ssh,target=/root/.ssh,type=volume",
     "source=repos,target=/root/repos,type=volume"
   ],
-  "remoteUser": "root"
+  "remoteUser": "root",
+  "postStartCommand": "service ssh start"
 }
