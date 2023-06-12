@@ -1,0 +1,12 @@
+{
+  "name": "my-env",
+  "image": "bald3r/my-env:fix-air",
+  "dockerFile": "./Dockerfile",
+  "runArgs": ["--privileged", "-p 10022:22", "-p 10080:80"],
+  "mounts": [
+    "source=config,target=/root/.config,type=volume",
+    "source=ssh,target=/root/.ssh,type=volume",
+    "source=repos,target=/root/repos,type=volume"
+  ],
+  "remoteUser": "root"
+}
