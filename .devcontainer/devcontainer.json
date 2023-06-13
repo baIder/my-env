@@ -4,9 +4,21 @@
   "name": "my-env",
   "dockerFile": "./Dockerfile",
   "runArgs": ["--privileged", "-p=10022:22", "-p=10080:80"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
   "mounts": [
     "source=config,target=/root/.config,type=volume",
     "source=ssh,target=/root/.ssh,type=volume",
+    "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
     "source=repos,target=/root/repos,type=volume"
   ],
   "remoteUser": "root",
