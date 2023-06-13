@@ -19,7 +19,8 @@
     "source=config,target=/root/.config,type=volume",
     "source=ssh,target=/root/.ssh,type=volume",
     "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
-    "source=repos,target=/root/repos,type=volume"
+    "source=repos,target=/root/repos,type=volume",
+    "source=pnpm-bin,target=/root/.local/share/pnpm,type=volume"
   ],
   "remoteUser": "root",
   "postStartCommand": "service ssh start"
